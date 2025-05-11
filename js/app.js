@@ -87,6 +87,7 @@ class UI{
         ultimaActualizacion.textContent = `Ultima Actualizacion: ${LASTUPDATE}`;
 
         setTimeout(()=>{
+            this.limpiarHTML();
             resultado.appendChild(precio);
             resultado.appendChild(precioAlto);
             resultado.appendChild(precioBajo);
@@ -148,7 +149,7 @@ function cotizarCriptomoneda(e){
 
     const {moneda, criptomoneda} = objCripto;
 
-    if(moneda === '' || criptomonedas === ''){
+    if(moneda === '' || criptomoneda === ''){
         ui.imprirmirAlerta('Ambos campos son obligatorios');
         return;
     }
